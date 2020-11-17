@@ -1,4 +1,7 @@
-
+"""Use 2 Random Forest models to predict returns using provided features.
+Finally, compare 3 Models (RF Classifier, RF Regressor, VAR) in Cryptocurrency
+Returns Predictability.
+"""
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.model_selection import train_test_split
@@ -45,6 +48,20 @@ print(f'MSFE Random Forest Regressor: {mse_rfr}')
 
 
 def sign_ret(num):
+    """
+    Convert predicted returns into trading signals
+    Parameters
+    ----------
+    num : int
+        Any number (in our case predicted returns)
+
+    Returns
+    -------
+    int
+        Trading signals, depends on the signs of predicted returns
+        (1 is go long, -1 is go short, 0 is stay still)
+
+    """
     if num > 0:
         return 1
     elif num < 0:
@@ -61,8 +78,27 @@ y_train = y_train.apply(sign_ret)
 
 
 # Print confusion matrices of train, test data
-def evaluate(y_test_fit, y_test, y_train_fit=None, y_train=None):
-    test_cm = confusion_matrix(y_test, y_test_fit)
+def evaluate(y_test_fit, y_test_real, y_train_fit=None, y_train_real=None):
+    """
+    Print confusion matrices and predictive accuracy
+    (to evaluate a model's performance).
+    Parameters
+    ----------
+    y_test_fit : Series
+        y predicted using test data
+    y_test_real : Series
+        real y during the test period
+    y_train_fit : Series
+        y predicted using train data
+    y_train_real : Series
+        real y during the training period
+
+    Returns
+    -------
+    NoneType
+        None
+    """
+    test_cm = confusion_matrix(y_test_real, y_test_fit)
     cm_index = ['Negative', 'Zero', 'Positive']
     d_test_cm = pd.DataFrame(test_cm, columns=cm_index, index=cm_index)
 
@@ -77,7 +113,7 @@ def evaluate(y_test_fit, y_test, y_train_fit=None, y_train=None):
     print(d_test_cm)
     print('--------')
     if isinstance(y_train_fit, pd.Series):
-        train_cm = confusion_matrix(y_train, y_train_fit)
+        train_cm = confusion_matrix(y_train_real, y_train_fit)
         d_train_cm = pd.DataFrame(train_cm, columns=cm_index, index=cm_index)
         print('Confusion Matrix (Train Data):')
         print(d_train_cm)
@@ -108,6 +144,7 @@ strats['RF Classifier'] = (1 + ret * y_fitted_rfc).cumprod()
 
 # Evaluate VAR model
 from .var_predictor import y_fitted_var
+
 error_var = y_fitted_var - y_test_num
 mse_var = sum(error_var * error_var) / len(error_var)
 print(f'MSFE VAR: {mse_var}')
@@ -152,3 +189,4 @@ fig.update_layout(default_layout)
 fig.show()
 # save an interactive version of the graph
 fig.write_html('resources/output/strats.html')
+status = 'Finished!'
