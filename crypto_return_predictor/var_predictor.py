@@ -1,4 +1,7 @@
-"""Since the features are sentiment indicators, they are often
+#!/usr/bin/env python3
+"""Predicts Crypto Returns using VAR model.
+
+Since the features are sentiment indicators, they are often
 highly-correlated. According to Brown & Cliff (2004), it's conceptually
 appealing to extract a common component of the indicators as their first
 Principal Component. This common component is then fitted into a VAR

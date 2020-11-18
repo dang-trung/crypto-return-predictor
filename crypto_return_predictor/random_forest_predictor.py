@@ -1,4 +1,7 @@
-"""Use 2 Random Forest models to predict returns using provided features.
+#!/usr/bin/env python3
+"""Predicts Crypto Returns using Random Forest & Sentiment-based Features.
+
+Use 2 Random Forest models to predict returns using provided features.
 Finally, compare 3 Models (RF Classifier, RF Regressor, VAR) in Cryptocurrency
 Returns Predictability.
 """
