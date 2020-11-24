@@ -47,7 +47,7 @@ Backtesting strategies based on 3 models:
 * Test period (25% of the dataset): 05/03/2019 - 25/07/2020
 * RF Classifier outperforms significantly both strategies and also the simple buy-and-hold strategy.
 ![alt text](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.png)
-* See the [interactive version](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.html).
+* Download the [interactive version](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.html).
 
 ## Table of Contents
 
