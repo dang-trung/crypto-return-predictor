@@ -15,7 +15,6 @@
     An Application of Random Forest!
   </p>
   
-
 ## Project Description
 ### Introduction
 
@@ -109,7 +108,7 @@ _Read more on how I retrieve these sentiment measures in my [graduation thesis](
 Order by performance (from high to low):
 1. Random Forest Classifier:
 * Accuracy: 61.86%
-* Confusion matrix: 
+* Confusion matrix:
 
 |           |           | Actual   |           |          |
 |-----------|-----------|----------|-----------|----------|
@@ -121,7 +120,7 @@ Order by performance (from high to low):
 * Backtesting daily returns: **~91bps**
 2. VAR(5):
 * Accuracy: 54.62%
-* Confusion matrix: 
+* Confusion matrix:
 
 |           |           | Actual   |           |          |
 |-----------|-----------|----------|-----------|----------|
