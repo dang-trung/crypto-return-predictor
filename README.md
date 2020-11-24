@@ -129,4 +129,4 @@ Order by performance (from high to low):
 
 * Backtesting daily returns: ~19bps (just slightly better than holding the CRIX index)
 ## Read More
-For better understanding of the project, kindly read the [report]([https://github.com/dang-trung/crypto-return-predictor/blob/master/reports/final_report.pdf]).
+For better understanding of the project, kindly read the [report](https://github.com/dang-trung/crypto-return-predictor/blob/master/reports/final_report.pdf).
