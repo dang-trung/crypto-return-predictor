@@ -3,23 +3,19 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# virtualenv
+# Environments
 .venv/
 venv/
 ENV/
+.env
+.python-version
+
+# PyCharm project settings
+/.idea/
 
 # Spyder project settings
 /.spyproject/
 
-# pyenv
-.python-version
-
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
-# dotenv
-.env
-
-# others
-/.idea/

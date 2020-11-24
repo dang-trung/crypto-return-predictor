@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-""" Cmd line: python -m crypto_return_predictor.
+""" __main__ module.
 
-This module runs when user enters in cmd line: python -m
+Runs the package when user enters in cmd line: python -m
 crypto_return_predictor."""
 from crypto_return_predictor import random_forest_predictor
 

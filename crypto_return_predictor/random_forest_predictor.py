@@ -7,11 +7,11 @@ Returns Predictability.
 """
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import train_test_split
 
 # 1. Data Preparation
-data = pd.read_csv('resources/input/final_dataset.csv', index_col='Date')
+data = pd.read_csv('data/final_dataset.csv', index_col='Date')
 
 # Market Returns - Dependent Variable
 y = data['CRIX'].diff() / data['CRIX'].shift(1)
@@ -108,7 +108,6 @@ def evaluate(y_test_fit, y_test_real, y_train_fit=None, y_train_real=None):
     accuracy = ((d_test_cm.iloc[0][0] + d_test_cm.iloc[1][1] +
                  d_test_cm.iloc[2][2]) / d_test_cm.sum().sum())
 
-    print('Model Performance')
     print(f'Prediction Accuracy: {round(accuracy * 100, 2)}%.')
     print('--------')
     print('Confusion Matrix (Test Data):')
@@ -120,9 +119,10 @@ def evaluate(y_test_fit, y_test_real, y_train_fit=None, y_train_real=None):
         d_train_cm = pd.DataFrame(train_cm, columns=cm_index, index=cm_index)
         print('Confusion Matrix (Train Data):')
         print(d_train_cm)
-    print('--------')
+        print('--------')
 
 
+print('Random Forest Regressor Performance:')
 evaluate(y_fitted_rfr, y_test, y_train_fit_rfr, y_train)
 
 # Random Forest Classifier
@@ -132,7 +132,7 @@ rfc = RandomForestClassifier(n_estimators=500, random_state=RANDOM_STATE,
 
 rfc.fit(X_train, y_train)
 y_fitted_rfc = pd.Series(rfc.predict(X_test))
-
+print('Random Forest Classifier Performance:')
 evaluate(y_fitted_rfc, y_test, rfc.predict(X_train), y_train)
 
 # Trading Strategies
@@ -153,6 +153,7 @@ mse_var = sum(error_var * error_var) / len(error_var)
 print(f'MSFE VAR: {mse_var}')
 
 y_fitted_var = y_fitted_var.apply(sign_ret)
+print('VAR Model Performance:')
 evaluate(y_fitted_var, y_test)
 strats['PCA VAR'] = (1 + ret * y_fitted_var).cumprod()
 
@@ -191,5 +192,5 @@ fig.add_trace(trace_four)
 fig.update_layout(default_layout)
 fig.show()
 # save an interactive version of the graph
-fig.write_html('resources/output/strats.html')
+fig.write_html('figures/strats.html')
 status = 'Finished!'

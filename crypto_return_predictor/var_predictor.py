@@ -2,13 +2,13 @@
 """Predicts Crypto Returns using VAR model.
 
 Since the features are sentiment indicators, they are often
-highly-correlated. According to Brown & Cliff (2004), it's conceptually
-appealing to extract a common component of the indicators as their first
+highly-correlated. According to Brown & Cliff (2004), it's appealing to
+extract a common component of the indicators as their first
 Principal Component. This common component is then fitted into a VAR
 timeseries model to check if it could be good predictor of returns."""
 import pandas as pd
 
-data = pd.read_csv('resources/input/final_dataset.csv', index_col='Date')
+data = pd.read_csv('data/final_dataset.csv', index_col='Date')
 
 # Independent Variables
 X = data.iloc[:, 1:]
