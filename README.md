@@ -1,9 +1,25 @@
-# Cryptocurrency Returns Predictor
+[![MIT License][license-shield]][license-url]
+[![GitHub][github-shield]][github-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/dang-trung/crypto-return-predictor">
+    <img src="https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Cryptocurrency Returns Predictor</h3>
+</p>
+  <p align="center">
+    An Application of Random Forest!
+  </p>
+  
 
 ## Project Description
 ### Introduction
 
-* **Objective**: Application of Random Forests (project for my intern at
+* **Objective**: Project for my intern at
 [Research Center VERA](https://www.unive.it/pag/35190/), Ca' Foscari University of Venice).   
 
 * **Abstract**: Use sentiment-based features to predict cryptocurrency returns.
@@ -35,21 +51,20 @@ Backtesting strategies based on 3 models:
 * See the [interactive version](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.html).
 
 ## Table of Contents
-- [Cryptocurrency Returns Predictor](#cryptocurrency-returns-predictor)
-  * [Project Description](#project-description)
-    + [Introduction](#introduction)
-    + [Methods Used](#methods-used)
-    + [Dependencies](#dependencies)
-    + [Interesting Results to Keep You Reading](#interesting-results-to-keep-you-reading)
-  * [Table of Contents](#table-of-contents)
-  * [Getting Started](#getting-started)
-    + [How to Run](#how-to-run)
-    + [Dependent Variable/Target](#dependent-variable-target)
-    + [Sentiment Measures](#sentiment-measures)
-    + [Features Selection](#features-selection)
-  * [Results](#results)
-  * [Read More](#read-more)
 
+- [Table of Contents](#table-of-contents)
+- [Project Description](#project-description)
+  - [Introduction](#introduction)
+  - [Methods Used](#methods-used)
+  - [Dependencies](#dependencies)
+  - [Interesting Results to Keep You Reading](#interesting-results-to-keep-you-reading)
+- [Getting Started](#getting-started)
+  - [How to Run](#how-to-run)
+  - [Dependent Variable/Target](#dependent-variabletarget)
+  - [Sentiment Measures](#sentiment-measures)
+  - [Features Selection](#features-selection)
+- [Results (Test Period)](#results-test-period)
+- [Read More](#read-more)
 
 ## Getting Started
 
@@ -130,3 +145,11 @@ Order by performance (from high to low):
 * Backtesting daily returns: ~19bps (just slightly better than holding the CRIX index)
 ## Read More
 For better understanding of the project, kindly read the [report](https://github.com/dang-trung/crypto-return-predictor/blob/master/reports/final_report.pdf).
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[github-shield]: https://img.shields.io/badge/-github-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[github-url]: https://github.com/dang-trung/
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/dang-trung/crypto-return-predictor/blob/master/LICENSE.md
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/dang-trung
