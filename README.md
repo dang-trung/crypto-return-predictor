@@ -19,7 +19,7 @@
 ### Introduction
 
 * **Objective**: Project for my intern at
-[Research Center VERA](https://www.unive.it/pag/35190/), Ca' Foscari University of Venice).   
+[Research Center VERA](https://www.unive.it/pag/35190/), Ca' Foscari University of Venice.   
 
 * **Abstract**: Use sentiment-based features to predict cryptocurrency returns.
 Models used: Random Forest Classifier, Random Forest Regressor, and VAR time-series model.
