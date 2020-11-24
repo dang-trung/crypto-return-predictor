@@ -29,13 +29,27 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 ### Interesting Results to Keep You Reading
 Backtesting strategies based on 3 models:   
 * How to generate trading signals: Long as predicted return > 0, short as predicted return < 0, wait otherwise.
-* Test set (25% of the dataset): 05/03/2019 - 25/07/2020
+* Test period (25% of the dataset): 05/03/2019 - 25/07/2020
 * RF Classifier outperforms significantly both strategies and also the simple buy-and-hold strategy.
 ![alt text](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.png)
 * See the [interactive version](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.html).
 
 ## Table of Contents
-https://ecotrust-canada.github.io/markdown-toc/
+- [Cryptocurrency Returns Predictor](#cryptocurrency-returns-predictor)
+  * [Project Description](#project-description)
+    + [Introduction](#introduction)
+    + [Methods Used](#methods-used)
+    + [Dependencies](#dependencies)
+    + [Interesting Results to Keep You Reading](#interesting-results-to-keep-you-reading)
+  * [Table of Contents](#table-of-contents)
+  * [Getting Started](#getting-started)
+    + [How to Run](#how-to-run)
+    + [Dependent Variable/Target](#dependent-variable-target)
+    + [Sentiment Measures](#sentiment-measures)
+    + [Features Selection](#features-selection)
+  * [Results](#results)
+  * [Read More](#read-more)
+
 
 ## Getting Started
 
@@ -76,7 +90,43 @@ _Read more on how I retrieve these sentiment measures in my [graduation thesis](
 * For VAR model: Lagged values of the first principal component of all 9 sentiment measures (up to 5 lags).
 * For Random Forests: Sentiment measures' lagged Values (up to 5 lags).
 
-## Results
+## Results (Test Period)
+Order by performance (from high to low):
+1. Random Forest Classifier:
+* Accuracy: 61.86%
+* Confusion matrix: 
 
+|           |           | Actual   |           |          |
+|-----------|-----------|----------|-----------|----------|
+|           |           | Negative | Unchanged | Positive |
+| Predicted | Negative  | 145      | 0         | 97       |
+|           | Unchanged | 1        | 0         | 0        |
+|           | Positive  | 96       | 0         | 170      |
+
+* Backtesting daily returns: **~91bps**
+2. VAR(5):
+* Accuracy: 54.62%
+* Confusion matrix: 
+
+|           |           | Actual   |           |          |
+|-----------|-----------|----------|-----------|----------|
+|           |           | Negative | Unchanged | Positive |
+| Predicted | Negative  | 57       | 0         | 185      |
+|           | Unchanged | 0        | 0         | 1        |
+|           | Positive  | 45       | 0         | 221      |
+
+* Backtesting daily returns: ~48bps
+3. Random Forest Regressor:
+* Accuracy: 56.19%
+* Confusion matrix:
+
+|           |           | Actual   |           |          |
+|-----------|-----------|----------|-----------|----------|
+|           |           | Negative | Unchanged | Positive |
+| Predicted | Negative  | 222      | 0         | 20       |
+|           | Unchanged | 1        | 0         | 0        |
+|           | Positive  | 202      | 0         | 64       |
+
+* Backtesting daily returns: ~19bps (just slightly better than holding the CRIX index)
 ## Read More
-For better understanding of the project, kindly read the [report]([link-to-report]).
+For better understanding of the project, kindly read the [report]([https://github.com/dang-trung/crypto-return-predictor/blob/master/reports/final_report.pdf]).
