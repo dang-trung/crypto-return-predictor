@@ -28,7 +28,7 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 
 ### Interesting Results to Keep You Reading
 Backtesting strategies based on 3 models:   
-* How to generate trading signals: Long as predicted return > 0, short as predicted return < 0, wait otherwise.
+* Generate trading signals: Long as predicted return > 0, short as predicted return < 0, wait otherwise.
 * Test period (25% of the dataset): 05/03/2019 - 25/07/2020
 * RF Classifier outperforms significantly both strategies and also the simple buy-and-hold strategy.
 ![alt text](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.png)
