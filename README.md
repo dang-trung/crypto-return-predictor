@@ -148,6 +148,6 @@ For better understanding of the project, kindly read the [report](https://github
 [github-shield]: https://img.shields.io/badge/-GitHub-black.svg?style=social&logo=github&colorB=555
 [github-url]: https://github.com/dang-trung/
 [license-shield]: https://img.shields.io/github/license/dang-trung/crypto-return-predictor.svg?style=social
-[license-url]: https://github.com/dang-trung/stocktwits-sentiment-classifier/blob/master/LICENSE.md
+[license-url]: https://github.com/dang-trung/crypto-return-predictor/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=social&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/dang-trung
