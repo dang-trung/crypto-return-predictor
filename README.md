@@ -15,8 +15,8 @@
     An Application of Random Forest!
   </p>
   
-## Project Description
-### Introduction
+# Project Description
+## Introduction
 
 * **Objective**: Project for my intern at
 [Research Center VERA](https://www.unive.it/pag/35190/), Ca' Foscari University of Venice.   
@@ -27,13 +27,13 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 
 * **Status**: Completed.
 
-### Methods Used
+## Methods Used
 * Random Forests (Regressor & Classifier).
 * Principal Component Analysis.
 * Vector Autoregression (VAR) model.
 * Sentiment indicators (from my graduation thesis).
 
-### Dependencies
+## Dependencies
 * Python 3
 * numpy==1.18.5
 * pandas==1.0.5
@@ -41,7 +41,7 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 * statsmodels==0.12.0
 * plotly==4.9.0
 
-### Interesting Results to Keep You Reading
+## Interesting Results to Keep You Reading
 Backtesting strategies based on 3 models:   
 * Generate trading signals: Long as predicted return > 0, short as predicted return < 0, wait otherwise.
 * Test period (25% of the dataset): 05/03/2019 - 25/07/2020
@@ -49,14 +49,14 @@ Backtesting strategies based on 3 models:
 ![alt text](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.png)
 * Download the [interactive version](https://github.com/dang-trung/crypto-return-predictor/blob/master/figures/strats.html).
 
-## Table of Contents
+# Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Project Description](#project-description)
   - [Introduction](#introduction)
   - [Methods Used](#methods-used)
   - [Dependencies](#dependencies)
   - [Interesting Results to Keep You Reading](#interesting-results-to-keep-you-reading)
+- [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [How to Run](#how-to-run)
   - [Dependent Variable/Target](#dependent-variabletarget)
@@ -65,9 +65,9 @@ Backtesting strategies based on 3 models:
 - [Results (Test Period)](#results-test-period)
 - [Read More](#read-more)
 
-## Getting Started
+# Getting Started
 
-### How to Run
+## How to Run
 1. Clone this repo:  
 `git clone https://github.com/dang-trung/crypto-return-predictor`
 2. Create your environment (virtualenv):  
@@ -82,13 +82,13 @@ Backtesting strategies based on 3 models:
 3. Run in terminal:  
 `python -m crypto_return_predictor`  
 
-### Dependent Variable/Target
+## Dependent Variable/Target
 Cryptocurrency market returns (computed using the market index CRIX,
 retrieved [here](http://data.thecrix.de/data/crix.json),
 see more on how the index is created at [Trimborn & Härdle (2018)](https://doi.org/10.1016/j.jempfin.2018.08.004)
 or [those authors' website](https://thecrix.de/).)
 
-### Sentiment Measures
+## Sentiment Measures
 * Sentiment score of Messages on StockTwits, Reddit Submissions, Reddit Comments
   * Computed using dictionary-based sentiment analysis, lexicon used: crypto-specific lexicon by [Chen et al (2019)](http://dx.doi.org/10.2139/ssrn.3398423),
   retrieved at the main author's [personal page](https://sites.google.com/site/professorcathychen/resume).
@@ -100,11 +100,11 @@ or [those authors' website](https://thecrix.de/).)
 
 _Read more on how I retrieve these sentiment measures in my [graduation thesis](https://github.com/dang-trung/) or its Github [repo](https://github.com/dang-trung/)._
 
-### Features Selection
+## Features Selection
 * For VAR model: Lagged values of the first principal component of all 9 sentiment measures (up to 5 lags).
 * For Random Forests: Sentiment measures' lagged Values (up to 5 lags).
 
-## Results (Test Period)
+# Results (Test Period)
 Order by performance (from high to low):
 1. Random Forest Classifier:
 * Accuracy: 61.86%
@@ -142,7 +142,7 @@ Order by performance (from high to low):
 |           | Positive  | 202      | 0         | 64       |
 
 * Backtesting daily returns: ~19bps (just slightly better than holding the CRIX index)
-## Read More
+# Read More
 For better understanding of the project, kindly read the [report](https://github.com/dang-trung/crypto-return-predictor/blob/master/reports/final_report.pdf).
 
 [github-shield]: https://img.shields.io/badge/-GitHub-black.svg?style=social&logo=github&colorB=555
