@@ -24,7 +24,6 @@ setup(
     url='https://github.com/dang-trung/crypto-return-predictor/',
     author='Trung Dang',
     author_email='dangtrung96@gmail.com',
-    package_dir={'': 'crypto_return_predictor'},
     packages=find_packages(include=['crypto_return_predictor']),
     package_data={'': ['data/final_dataset.csv']},
     python_requires='>=3.5, <4',
