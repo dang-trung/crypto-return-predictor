@@ -28,10 +28,10 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 * **Status**: Completed.
 
 ## Methods Used
-* Random Forests (Regressor & Classifier).
-* Principal Component Analysis.
-* Vector Autoregression (VAR) model.
-* Sentiment Indicators (retrieved from my graduation thesis).
+* Random Forests (Regressor & Classifier)
+* Principal Component Analysis
+* Vector Autoregression (VAR) model
+* Sentiment Indicators (retrieved from my graduation thesis)
 
 ## Dependencies
 * Python 3
