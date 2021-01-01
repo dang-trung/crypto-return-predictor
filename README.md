@@ -31,7 +31,7 @@ Analysis timeframe: 28/11/2014 - 25/07/2020.
 * Random Forests (Regressor & Classifier).
 * Principal Component Analysis.
 * Vector Autoregression (VAR) model.
-* Sentiment indicators (from my graduation thesis).
+* Sentiment Indicators (retrieved from my graduation thesis).
 
 ## Dependencies
 * Python 3
